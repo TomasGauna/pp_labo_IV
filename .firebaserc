@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pp-labo-4c5ae": {
+      "hosting": {
+        "recu_pp": [
+          "pp-labo-4c5ae"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pp-labo-4c5ae"
+  }
+}

@@ -1,0 +1,42 @@
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" routerLink="/alta">Alta</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" routerLink="/detalle">Detalle</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" routerLink="/publico">Listado Publico</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" routerLink="/container">Container</a>
+              </li>
+            </ul>
+            <button routerLink="/login" *ngIf="!user">LOGIN</button>
+            <button *ngIf="user">{{user.email.split("@")[0].toUpperCase()}}</button>
+            <button style="margin-left: 10px;" (click)="cerrarSesion()" *ngIf="user">LOGOUT</button>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container-gral">
+        <div class="container-desc">
+            <label style="position: relative; color: #fff; font-size: 20px; left: 0%; bottom: 7%;">Datos personales - GitHub</label> 
+                <span>Nombre: {{perfil.name}}</span>
+                <span>UserName: {{perfil.login}}</span>
+                <span>en GitHub desde: {{perfil.created_at}}</span>
+            <img class="image" [src]="perfil.avatar_url">
+        </div>
+    </div>
+</div>

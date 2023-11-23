@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "recu_pp",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
